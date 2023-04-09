@@ -27,9 +27,7 @@ public class StatsService {
 
     public int sumSales(long[] sales) {
         long sum = 0;
-        for (int i = 0; i < sales.length; i++) {
-            sum = sum + sales[i];
-        }
+        for (long sale : sales) sum = sum + sale;
         return (int) sum;
     }
 
@@ -50,10 +48,10 @@ public class StatsService {
             sum = sum + sales[i];
             a = i + 1;
         }
-        int avarage = (int) sum / a;
+        int average = (int) sum / a;
         int lessCount = 0;
-        for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < avarage) {
+        for (long sale : sales) {
+            if (sale < average) {
                 lessCount++;
             }
         }
@@ -67,10 +65,10 @@ public class StatsService {
             sum = sum + sales[i];
             a = i + 1;
         }
-        int avarage = (int) sum / a;
+        int average = (int) sum / a;
         int moreCount = 0;
-        for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > avarage) {
+        for (long sale : sales) {
+            if (sale > average) {
                 moreCount++;
             }
         }
